@@ -27,3 +27,10 @@ for(let i=0; i < btnOpenModal.length; i++){
 btnCloseModal.addEventListener('click',CloseModal);
 overlay.addEventListener('click',CloseModal);
 
+// Enable to CloseWindow using 'esc' button on keyboard
+document.addEventListener('keydown', function(e) {
+    if(e.key === 'Escape' && !modal.classList.contains('hidden')){
+        CloseModal();
+    }
+});
+
